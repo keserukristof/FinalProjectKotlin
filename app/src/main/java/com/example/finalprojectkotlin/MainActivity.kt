@@ -1,7 +1,9 @@
 package com.example.finalprojectkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import com.example.finalprojectkotlin.databinding.ActivityMainBinding
 import com.example.finalprojectkotlin.model.Author
@@ -21,7 +23,10 @@ class MainActivity : AppCompatActivity() {
         author.neptun = "OO8RQV"
         binding.author = author
 
-        var goToAboutActivity
-
+        val goToAboutMe : Button = findViewById(R.id.button_go_to_about_me)
+        goToAboutMe.setOnClickListener {
+            val intent = Intent(this, AboutActivity :: class.java)
+            startActivity(intent)
+        }
     }
 }
