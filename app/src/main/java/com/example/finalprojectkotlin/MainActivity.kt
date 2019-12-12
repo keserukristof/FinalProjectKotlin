@@ -21,5 +21,7 @@ class MainActivity : AppCompatActivity() {
         author.neptun = "OO8RQV"
         binding.author = author
 
+        var goToAboutActivity
+
     }
 }
