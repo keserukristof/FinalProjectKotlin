@@ -20,5 +20,6 @@ class MainActivity : AppCompatActivity() {
         author.name = "Keserű Kristóf"
         author.neptun = "OO8RQV"
         binding.author = author
+
     }
 }
