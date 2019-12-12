@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Data binding
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        @Suppress("UNUSED_VARIABLE")
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
         var author = Author()
         author.name = "Keserű Kristóf"
         author.neptun = "OO8RQV"
