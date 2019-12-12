@@ -23,5 +23,5 @@ class HopeYouLike : Fragment() {
             R.layout.fragment_hope_you_like,container,false)
         return binding.root
     }
-    
+
 }
