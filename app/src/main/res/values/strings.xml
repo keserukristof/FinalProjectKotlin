@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FinalProjectKotlin</string>
     <string name="welcome">Üdvözöllek az alkalmazásomban!</string>
+    <string name="text_go_to_buy_list_button">Bevásárló lista</string>
 </resources>
