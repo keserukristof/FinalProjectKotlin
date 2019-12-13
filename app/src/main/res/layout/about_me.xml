@@ -11,13 +11,13 @@
             android:id="@+id/aboutMeFragment"
             android:name="com.example.finalprojectkotlin.fragments.AboutMee"
             android:layout_width="match_parent"
-            android:layout_height="374dp" />
+            android:layout_height="211dp" />
 
         <fragment
             android:id="@+id/hopeYouLikeItFragment"
             android:name="com.example.finalprojectkotlin.fragments.HopeYouLike"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="519dp" />
 
     </LinearLayout>
 

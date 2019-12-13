@@ -8,10 +8,17 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/text_hope_you_like"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hallo" />
+            android:text="@string/text_hope" />
+
+        <ImageView
+            android:id="@+id/cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/cat" />
+
     </LinearLayout>
 
 </layout>
