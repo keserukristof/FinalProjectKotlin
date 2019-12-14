@@ -64,14 +64,14 @@
             android:text="@string/text_button_about_me"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            app:layout_constraintTop_toBottomOf="@+id/button_go_to_room_shopping" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_go_to_room_shopping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Button"
+            android:text="@string/text_button_go_to_room"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

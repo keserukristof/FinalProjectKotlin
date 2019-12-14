@@ -40,5 +40,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val goToRoom : Button = findViewById(R.id.button_go_to_room_shopping)
+        goToRoom.setOnClickListener {
+            val intent = Intent(this, RoomShopping :: class.java)
+            startActivity(intent)
+        }
+
     }
 }
