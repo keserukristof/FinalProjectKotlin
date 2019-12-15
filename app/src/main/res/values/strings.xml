@@ -11,4 +11,8 @@
     <string name="text_about_mee">Keserű Kristóf vagyok harmadéves PTI hallgató. Ez a program mobil alkalmazásfejlesztés órára készült javítás céljából.</string>
     <string name="text_hope">Remélem tetszik a programom!</string>
     <string name="text_button_go_to_room">Bevásárlás room-al</string>
+    <string name="button_add">Elem hozzáadása</string>
+    <string name="hint_word">Termék</string>
+    <string name="button_save">Mentés</string>
+    <string name="empty_not_saved">Nem sikerült a mentés mert üresen hagytad a mezőt.</string>
 </resources>
