@@ -5,12 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprojectkotlin.R
 
 class WordListAdapter internal constructor(
     context: Context
 ) : RecyclerView.Adapter<WordListAdapter.WordViewHolder>() {
+
+
+    //diff util
+    class WordDiffCallback : DiffUtil.ItemCallback<Word>() {
+        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem.word == newItem.word
+        }
+
+        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem.equals(newItem)
+        }
+
+    }
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var words = emptyList<Word>() // Cached copy of words

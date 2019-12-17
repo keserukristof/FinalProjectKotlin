@@ -1,14 +1,17 @@
 package com.example.finalprojectkotlin
 
 import android.app.Activity
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalprojectkotlin.room_recycler.RecyclerItemClickListener
 import com.example.finalprojectkotlin.room_recycler.Word
 import com.example.finalprojectkotlin.room_recycler.WordListAdapter
 import com.example.finalprojectkotlin.room_recycler.WordViewModel
@@ -19,6 +22,7 @@ class ShoppingActivity : AppCompatActivity() {
     private val newWordActivityRequestCode = 1
     private lateinit var wordViewModel: WordViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping)
@@ -27,6 +31,15 @@ class ShoppingActivity : AppCompatActivity() {
         val adapter = WordListAdapter(this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.addOnItemTouchListener(RecyclerItemClickListener(this, recyclerView, object : RecyclerItemClickListener.OnItemClickListener {
+            override fun onItemClick(view: View, position: Int) {
+                Toast.makeText(applicationContext, "Clicked", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onItemLongClick(view: View?, position: Int) {
+                Toast.makeText(applicationContext, "Long clicked", Toast.LENGTH_LONG).show()            }
+        }))
+
 
         wordViewModel = ViewModelProvider(this).get(WordViewModel::class.java)
         wordViewModel.allWords.observe(this, Observer { words ->
@@ -39,6 +52,7 @@ class ShoppingActivity : AppCompatActivity() {
             val intent = Intent(this@ShoppingActivity, NewWordActivity::class.java)
             startActivityForResult(intent, newWordActivityRequestCode)
         }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -56,4 +70,7 @@ class ShoppingActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG).show()
         }
     }
+
+
+
 }
